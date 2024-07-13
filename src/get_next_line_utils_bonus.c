@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-char	*ft_strchr(const char *str, int chr)
+char	*gnl_strchr(const char *str, int chr)
 {
 	while (*str)
 	{
@@ -25,7 +25,7 @@ char	*ft_strchr(const char *str, int chr)
 	return (NULL);
 }
 
-size_t	ft_strlen(const char *str)
+size_t	gnl_strlen(const char *str)
 {
 	size_t	i;
 
@@ -35,7 +35,7 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-char	*ft_strcpy(char *dst, const char *src)
+char	*gnl_strcpy(char *dst, const char *src)
 {
 	char	*ptr;
 
@@ -46,7 +46,7 @@ char	*ft_strcpy(char *dst, const char *src)
 	return (dst);
 }
 
-char	*ft_strcat(char *dst, const char *src)
+char	*gnl_strcat(char *dst, const char *src)
 {
 	char	*ptr;
 
@@ -59,15 +59,15 @@ char	*ft_strcat(char *dst, const char *src)
 	return (dst);
 }
 
-char	*ft_strdup(const char *src)
+char	*gnl_strdup(const char *src)
 {
 	size_t	len;
 	char	*dst;
 
-	len = ft_strlen(src) + 1;
+	len = gnl_strlen(src) + 1;
 	dst = (char *)malloc(len);
 	if (!dst)
 		return (NULL);
-	ft_strcpy(dst, src);
+	gnl_strcpy(dst, src);
 	return (dst);
 }
